@@ -51,6 +51,13 @@ main = do
   print $ (\x -> 5 * x) 5
   print $ (\x y z -> x + y + z) 4 5 6
   print $ my_zip [1, 2, 3, 4] [5, 6, 7, 8, 9, 10]
+  print $ my_foldr1 (\x y -> x + y) [1, 2, 3, 4]
+  print $ my_foldr (\x y -> x + y) 0 [1, 2, 3, 4]
+  print $ my_foldl1 (\x y -> x + y) [1, 2, 3, 4]
+  print $ my_foldl (\x y -> x + y) 0 [1, 2, 3, 4]
+  print $ first_digit 1456
+  print $ first_digit 0
+  print $ first_digit 456
 
 fibonacci :: Int -> Int
 fibonacci 0 = 0
@@ -185,9 +192,21 @@ my_filter p (x : xs)
   | otherwise = my_filter p xs
 
 my_foldr1 :: (a -> a -> a) -> [a] -> a
-my_foldr1 f [x] = x
+my_foldr1 _ [x] = x
 my_foldr1 f (x : xs) = f x (my_foldr1 f xs)
 
 my_foldr :: (a -> a -> a) -> a -> [a] -> a
-my_foldr f init [] = init
+my_foldr _ init [] = init
 my_foldr f init (x : xs) = f x (my_foldr f init xs)
+
+my_foldl :: (a -> a -> a) -> a -> [a] -> a
+my_foldl _ acc [] = acc
+my_foldl f acc (x : xs) = my_foldl f (f acc x) xs
+
+my_foldl1 :: (a -> a -> a) -> [a] -> a
+my_foldl1 f (x : xs) = my_foldl f x xs
+
+first_digit :: Int -> Int
+first_digit x
+  | x < 10 = x
+  | otherwise = first_digit (x `div` 10)

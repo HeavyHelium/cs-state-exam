@@ -9,3 +9,7 @@
 - `$` is for avoiding parentheses, anything appearing after it will take precendence over anything that comes before
 
 - `.` - function composition, i.e. we are tying the output of whatever appears on the right to the input of whatever appears on the left, the result is a function
+
+### Currying
+
+Прилагането на функция е ляво асоциативна операция, заместват се аргументите от ляво надясно;
