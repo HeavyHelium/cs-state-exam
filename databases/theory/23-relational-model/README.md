@@ -162,7 +162,7 @@ SQL е език за заявки към БД, но интерпретацият
       * \<attribute\> \<op\> \<attribute\>
       * \<attribute\> \<op\> \<constant\>
       * \<contant\> \<op\> \<attribute\>   
-    където attribute $\in R  и op $\in$ {=, $\neq$, <, >, ..., AND, OR}   
+    където attribute $\in$ R  и op $\in$ {=, $\neq$, <, >, ..., AND, OR}   
   * ??комутатативна - сигурно в някакъв тривиален смисъл е вярно 
 
 Селекцията представлява вертикална рестрикция.   
