@@ -159,10 +159,10 @@ SQL е език за заявки към БД, но интерпретацият
 * Селекция - унарна операция; 
   * <u>**бел.**</u> $\sigma_{predicate}(R)$, където $predicate$ е условен израз
     * условният израз се състои от операции от вида: 
-      * $<attribute> <op> <attribute>$ 
-      * $<attribute> <op> <constant>$
-      * $<contant> <op> <attribute>$   
-    където $attribute\in R$  и $op \in \{=, \neq, <, >, ..., AND, OR\}$   
+      * \<attribute\> \<op\> \<attribute\>
+      * \<attribute\> \<op\> \<constant\>
+      * \<contant\> \<op\> \<attribute\>   
+    където attribute $\in R  и op $\in$ {=, $\neq$, <, >, ..., AND, OR}   
   * ??комутатативна - сигурно в някакъв тривиален смисъл е вярно 
 
 Селекцията представлява вертикална рестрикция.   
