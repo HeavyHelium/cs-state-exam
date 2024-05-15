@@ -46,7 +46,7 @@ Movies(title: string, year: integer, length: integer, filmType: string)
 
 `def` **_Релация(формална дефиниция)_**
 
-Нека **r е релация**(т.е. таблица). С **R** нека означим **нейната схема: R(A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>n</sub>)**. Тогава r е математическа релация от степен **n** върху домейните dom(A<sub>1</sub>), ..., dom(A<sub>n</sub>).  
+**R е релация** с релационна схема **R(A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>n</sub>)**. Тогава r(R) е математическа релация от степен **n** върху домейните dom(A<sub>1</sub>), ..., dom(A<sub>n</sub>).  
 T.e. **r $\subset$ dom(A<sub>1</sub>) $\times$ ... $\times$ dom(A<sub>n</sub>)**.
 
 Така r или r(R) е множество от n-tuples(кортежи):
