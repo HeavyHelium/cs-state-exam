@@ -242,6 +242,24 @@ $Q(A_1, ..., A_k) = R \div S \iff Q \times S = R$.
   * $R \bowtie S$ := $R \bowtie_{R.C = S.C} S$
 
 
+**_напр._** нека имаме релацията Movies:    
+|title           |year |length|filmType|studioName|starName    |   
+|----------------|-----|------|--------|----------|------------|
+|Star Wars       |1977 |124   |color   |Fox       |Carry Fisher|
+|Mighty Ducks    |1991 |104   |color   |Disney    |Emilio Estevez|
+|Wayne's World   |1992 |95    |color   |Paramount |Dana Carvey|
+|Star Wars       |1977 |124   |color   |Fox       |Mark Hamill|
+|Star Wars       |1977 |124   |color   |Fox       |Harrison Ford|
+|Wayne's World   |1992 |95    |color   |Paramount |Mike Meyers|
+
+
+
+Тогава следната заявка би ни дала адресите на всички актьори(за които имаме информация), които са играли във филма **Star Wars**:   
+нека $ActorInfo := R \cup S$  
+$\pi_{address}(ActorInfo \bowtie_{starName = name} Movies)$
+❗<u>**забл.**</u> Т.к. представихме релациите като множества, повторения няма да има; ако работим с ММ предствяне, можем да приложим операторът $\delta$, за да премахнем такива.  
+
+
 #### Приоритет на операторите 
 1. Унарни оператори - селекция, проекция и преименуване 
 2. Декартово произведение и съединение 
